@@ -1,0 +1,19 @@
+{
+    "tile2": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//w8AAAD//9/dDwAA8J/5//8PAADwGRH5RA8AAB/x8fFEDwAAnxkR/0QPAACfGRH/RA8AAB/x8fFEDwAA8BkR/0QPAADwn/lPRA8AAAD//0/0AAAAAAAA//8AAAAAAADwDwAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "tilemapTile": true,
+        "displayName": "rabbit boy ship0"
+    },
+    "tile1": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8PAAAA///f3Q8AAPCf+f//DwAA8BkR+UQPAAAf8fHxRA8AAJ8ZEf9EDwAAnxkR/0QPAAAf8fHxRA8AAPAZEf9EDwAA8J/5T0QPAAAA//9P9AAAAAAAAP//AAAAAAAA8A8AAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "tilemapTile": true,
+        "displayName": "rabbit boy ship"
+    },
+    "*": {
+        "mimeType": "image/x-mkcd-f4",
+        "dataEncoding": "base64",
+        "namespace": "myTiles"
+    }
+}
