@@ -17,8 +17,10 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
         `, RabbitBoy, 100, 0)
+    music.play(music.melodyPlayable(music.pewPew), music.PlaybackMode.InBackground)
 })
 sprites.onOverlap(SpriteKind.Enemy, SpriteKind.Projectile, function (sprite, otherSprite) {
+    music.play(music.melodyPlayable(music.baDing), music.PlaybackMode.InBackground)
     Robot_1.startEffect(effects.spray)
     pause(500)
     effects.clearParticles(Robot_1)
@@ -151,45 +153,46 @@ scene.setBackgroundImage(img`
     1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
     `)
 Robot_1 = sprites.create(img`
-    . . f f f . . . . . . . . f f f 
-    . f f c c . . . . . . f c b b c 
-    f f c c . . . . . . f c b b c . 
-    f c f c . . . . . . f b c c c . 
-    f f f c c . c c . f c b b c c . 
-    f f c 3 c c 3 c c f b c b b c . 
-    f f b 3 b c 3 b c f b c c b c . 
-    . c b b b b b b c b b c c c . . 
-    . c 1 b b b 1 b b c c c c . . . 
-    c b b b b b b b b b c c . . . . 
-    c b c b b b c b b b b f . . . . 
-    f b 1 f f f 1 b b b b f c . . . 
-    f b b b b b b b b b b f c c . . 
-    . f b b b b b b b b c f . . . . 
-    . . f b b b b b b c f . . . . . 
-    . . . f f f f f f f . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
     `, SpriteKind.Enemy)
 RabbitBoy = sprites.create(img`
-    . . . . . . . e c 7 . . . . . . 
-    . . . . e e e c 7 7 e e . . . . 
-    . . c e e e e c 7 e 2 2 e e . . 
-    . c e e e e e c 6 e e 2 2 2 e . 
-    . c e e e 2 e c c 2 4 5 4 2 e . 
-    c e e e 2 2 2 2 2 2 4 5 5 2 2 e 
-    c e e 2 2 2 2 2 2 2 2 4 4 2 2 e 
-    c e e 2 2 2 2 2 2 2 2 2 2 2 2 e 
-    c e e 2 2 2 2 2 2 2 2 2 2 2 2 e 
-    c e e 2 2 2 2 2 2 2 2 2 2 2 2 e 
-    c e e 2 2 2 2 2 2 2 2 2 2 4 2 e 
-    . e e e 2 2 2 2 2 2 2 2 2 4 e . 
-    . 2 e e 2 2 2 2 2 2 2 2 4 2 e . 
-    . . 2 e e 2 2 2 2 2 4 4 2 e . . 
-    . . . 2 2 e e 4 4 4 2 e e . . . 
-    . . . . . 2 2 e e e e . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
     `, SpriteKind.Player)
 RabbitBoy.setPosition(13, 59)
 Robot_1.setPosition(132, 17)
 RabbitBoy.setStayInScreen(true)
 RabbitBoy.setBounceOnWall(true)
+game.showLongText("Hello! Help Super Rabbit boy fly and wash the robots!", DialogLayout.Bottom)
 animation.runImageAnimation(
 Robot_1,
 assets.animation`Robot`,
